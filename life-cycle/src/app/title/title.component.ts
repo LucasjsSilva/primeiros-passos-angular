@@ -11,11 +11,11 @@ export class TitleComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit(): void {
-		console.log("Inicializando")
+		console.log("Inicializando");
   }
 
 	ngOnChanges(): void {
-		console.log("Houve Mudanças")
+		console.log("Houve Mudanças");
 	}
 
 }
