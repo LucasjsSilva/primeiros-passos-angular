@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	isAliveCheckSample: boolean = true;
   title = 'life-cycle';
+
+	constructor(){
+
+	}
+
+	disposeCheckSample(): void{
+		this.isAliveCheckSample = false;
+	}
 }

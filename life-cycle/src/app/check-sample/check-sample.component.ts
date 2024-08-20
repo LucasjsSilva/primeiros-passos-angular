@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-check-sample',
@@ -11,7 +11,8 @@ implements OnInit,
 					 AfterContentChecked,
 					 AfterContentInit,
 					 AfterViewChecked,
-					 AfterViewInit
+					 AfterViewInit,
+					 OnDestroy
 {
 
 	quantidade: number = 0
@@ -20,11 +21,11 @@ implements OnInit,
 
 	}
 
-	adicionar(){
+	adicionar(): void{
 		this.quantidade += 1
 	}
 
-	decrementar(){
+	decrementar(): void{
 		this.quantidade -= 1
 	}
 
@@ -51,5 +52,9 @@ implements OnInit,
   ngOnInit(): void {
 		console.log("ngOnInit");
   }
+
+	ngOnDestroy(): void {
+		console.log("Tchau meu amigo!");
+	}
 
 }
