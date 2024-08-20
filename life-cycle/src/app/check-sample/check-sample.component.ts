@@ -14,8 +14,18 @@ implements OnInit,
 					 AfterViewInit
 {
 
+	quantidade: number = 0
+
   constructor() {
 
+	}
+
+	adicionar(){
+		this.quantidade += 1
+	}
+
+	decrementar(){
+		this.quantidade -= 1
 	}
 
 	ngAfterViewInit(): void {
